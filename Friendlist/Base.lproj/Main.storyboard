@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fh9-ZX-S6h">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings-->
+        <scene sceneID="KG3-64-Qdv">
+            <objects>
+                <viewController id="ClB-bJ-DQj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fBG-gv-drK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="THq-g3-7Kc"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="4oP-nI-ycZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KXJ-Ey-EY1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1207" y="905"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Sh9-Sq-59g">
+            <objects>
+                <tabBarController id="Fh9-ZX-S6h" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="no5-vq-tB9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ICQ-8D-2hM" kind="relationship" relationship="viewControllers" id="yb9-Io-9C2"/>
+                        <segue destination="ClB-bJ-DQj" kind="relationship" relationship="viewControllers" id="C8z-8B-vNK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbS-vp-LvX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1207" y="166"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="whG-vH-kce">
+            <objects>
+                <viewController id="ICQ-8D-2hM" customClass="FriendsHomeViewController" customModule="Friendlist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L9I-33-jdq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNZ-On-Kna">
+                                <rect key="frame" x="140" y="430" width="134" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Show Friendlist"/>
+                                <connections>
+                                    <segue destination="352-mM-irh" kind="show" id="Wum-uC-DsW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CZ-Bz-wXU">
+                                <rect key="frame" x="159.5" y="486" width="95" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Show Alert"/>
+                                <connections>
+                                    <action selector="showAlertButtonDidTap:" destination="ICQ-8D-2hM" eventType="touchUpInside" id="LeD-OI-8kh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5CZ-Bz-wXU" firstAttribute="centerX" secondItem="L9I-33-jdq" secondAttribute="centerX" id="BdB-o6-kct"/>
+                            <constraint firstItem="SNZ-On-Kna" firstAttribute="centerY" secondItem="L9I-33-jdq" secondAttribute="centerY" id="K2g-R5-VFx"/>
+                            <constraint firstItem="SNZ-On-Kna" firstAttribute="centerX" secondItem="L9I-33-jdq" secondAttribute="centerX" id="YjY-r0-D5e"/>
+                            <constraint firstItem="5CZ-Bz-wXU" firstAttribute="top" secondItem="SNZ-On-Kna" secondAttribute="bottom" constant="20" id="xjn-6i-xNl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="whI-xU-cZY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Friends" image="person.circle.fill" catalog="system" id="TiJ-3V-xQs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="01I-P0-M37" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-357" y="165"/>
+        </scene>
+        <!--Friendlist-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FriendListViewController" customModule="Friendlist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aaM-3O-uKP">
+                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aaM-3O-uKP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6J7-10-12B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aaM-3O-uKP" secondAttribute="bottom" id="6aJ-4O-qmd"/>
+                            <constraint firstItem="aaM-3O-uKP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ENv-yQ-Kcf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aaM-3O-uKP" secondAttribute="trailing" id="UBl-tz-slm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Friendlist" id="e3D-gB-Imk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Ts0-V7-X94">
+                            <connections>
+                                <action selector="doneButtonDidTap:" destination="BYZ-38-t0r" id="v8u-tX-TaY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="aaM-3O-uKP" id="Nqm-JT-IMf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1287" y="165"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JLg-BD-Fv6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="352-mM-irh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="aGW-yl-Ulj"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bmH-S3-Z7N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Fkw-dI-dEL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ul-kG-7SL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="467" y="165"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="person.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
